@@ -6,7 +6,7 @@ const ProductSchema = new mongoose.Schema({
     desc : {type: String ,require : true},
     img : {type: String ,require : true},
     category : {type: String ,require : true},
-    size : {type: String},
+    size : {type: String},// Make it array for multiple inputs
     color : {type: String},
     price : {type: String},
     availableQty : {type: Number}
