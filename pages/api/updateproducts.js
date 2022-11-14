@@ -3,6 +3,7 @@ import connectDb from "../../middleware/mongoose";
 
 const handler = async (req, res)=> {
     if(req.method =='POST'){
+      const{_id,title,slug,desc,img,category,size,color,price,availableQty} =req.body
       let p = await Product.findByIdAndUpdate(req.body._id , req.body)
       res.status(200).json({success:"success"})
     }

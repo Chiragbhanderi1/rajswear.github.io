@@ -1,4 +1,6 @@
+import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
+import Router, { useRouter } from "next/router";
 import BlogCard from "../../src/components/dashboard/BlogCard";
 import SalesOverview from "../../src/components/dashboard/SalesOverview";
 import DailyActivity from "../../src/components/dashboard/DailyActivity";
@@ -7,10 +9,19 @@ import theme from "../../src/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
 
 export default function Index() {
+  const router =useRouter()
+  useEffect(()=>{
+    if(!localStorage.getItem('admin')){
+      router.push('/admin/login')
+    }
+  },[])
   return (
     
     <ThemeProvider theme={theme}>
       <style jsx global>{`
+        .navbar{
+          display:none
+        },
         footer{
           display:none
         }

@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="container px-5 py-14 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Link href={"/"}>
-              <div className="flex items-center">
+              <div className="md:flex items-center">
 
-              <Image className="ml-5" src="/logo.ico" alt="" width={50} height={50}/>
+              <Image className="md:ml-5 mx-auto md:mx-1" src="/logo.ico" alt="" width={50} height={50}/>
               <span className="ml-2 text-xl text-red-500">Raj's Wear</span>
               </div>
             </Link> 

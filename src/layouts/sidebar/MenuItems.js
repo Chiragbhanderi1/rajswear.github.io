@@ -15,14 +15,14 @@ const Menuitems = [
     href: "/admin/allproducts",
   },
   {
-    title: "Image Uploder",
-    icon: "upload",
-    href: "/admin/imageuploder",
-  },
-  {
     title: "Orders",
     icon: "shopping-cart",
     href: "/admin/allorders",
+  },
+  {
+    title: "Update",
+    icon: "user-plus",
+    href: "/admin/update",
   }
 ];
 

@@ -6,7 +6,7 @@ const Orders = () => {
   const router = useRouter()
   const[orders , setOrders] = useState([])
   useEffect( ()=>{
-    const fetchOrders =async()=>{
+    const fetchOrders =async()=>{ 
       let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/myorders`, {
         method: "POST", // or 'PUT'
         headers: {

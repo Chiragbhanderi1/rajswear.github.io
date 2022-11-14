@@ -1,6 +1,7 @@
-import Head from "next/head";
+ import Head from "next/head";
 import Image from "next/image";
-import { MdLocalShipping } from "react-icons/md";
+import { MdLocalShipping,MdLocalOffer } from "react-icons/md";
+import { FaTshirt } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Home() {
@@ -177,70 +178,40 @@ export default function Home() {
           <div className="flex flex-wrap -m-4">
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
-                  </svg>
+                <div className="w-10 h-10 inline-flex items-center justify-center md:mx-48 text-center rounded-full bg-purple-100 text-purple-500 mb-4">
+                <FaTshirt className="w-16 h-5"/>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 text-center font-medium title-font mb-2">
                   Premium Tshirts
                 </h2>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-center text-base">
                   Our products are 100% made of cotton.
                 </p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
-                  </svg>
+                <div className="w-10 h-10 inline-flex items-center justify-center md:mx-48 rounded-full bg-purple-100 text-purple-500 mb-4">
+                <MdLocalShipping className="w-16 h-5"/>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 font-medium text-center title-font mb-2">
                   Free Shipping
                 </h2>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-center text-base">
                   We Ship all over India for FREE !
                 </p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-purple-100 text-purple-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-7 h-12"
-                    viewBox="0 0 24 24"
-                  >
-                    <MdLocalShipping className="w-7 h-12" />
-                  </svg>
+              <div className="border border-gray-200 p-6 rounded-lg ">
+                <div className="w-10 h-10 inline-flex items-center justify-center md:mx-48 rounded-full bg-purple-100 text-purple-500 mb-4">
+                <MdLocalOffer className="w-16 h-5 "/>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 text-center font-medium title-font mb-2">
                   {" "}
                   Exiting offers
                 </h2>
-                <p className="leading-relaxed text-base">
+                <p className="leading-relaxed text-center text-base">
                   We provide amazing offers & discounts on our products.
                 </p>
               </div>

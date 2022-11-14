@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import FeatherIcon from "feather-icons-react";
 import Image from "next/image";
 import userimg from "../../../assets/images/users/user2.jpg";
@@ -14,6 +14,12 @@ import {
   Divider,
 } from "@mui/material";
 const ProfileDD = () => {
+  const [key, setKey] = useState();
+  const logout = () => {
+    localStorage.removeItem("admin");
+    setKey(Math.random());
+    router.push("/admin/login");
+  };
   const [anchorEl4, setAnchorEl4] = React.useState(null);
 
   const handleClick4 = (event) => {
@@ -34,7 +40,7 @@ const ProfileDD = () => {
       >
         <Box display="flex" alignItems="center">
           <Image
-            src={userimg}
+            src={'/logo.ico'}
             alt={userimg}
             width="30"
             height="30"
@@ -49,14 +55,7 @@ const ProfileDD = () => {
               alignItems: "center",
             }}
           >
-            <Typography
-              color="textSecondary"
-              variant="h5"
-              fontWeight="400"
-              sx={{ ml: 1 }}
-            >
-              Hi,
-            </Typography>
+            
             <Typography
               variant="h5"
               fontWeight="700"
@@ -64,7 +63,7 @@ const ProfileDD = () => {
                 ml: 1,
               }}
             >
-              Julia
+             Hi, Admin
             </Typography>
             <FeatherIcon icon="chevron-down" width="20" height="20" />
           </Box>
@@ -78,40 +77,15 @@ const ProfileDD = () => {
         onClose={handleClose4}
         sx={{
           "& .MuiMenu-paper": {
-            width: "385px",
+            width: "150px",
           },
         }}
       >
-        <Box>
-          <Box p={2} pt={0}>
-            <List
-              component="nav"
-              aria-label="secondary mailbox folder"
-              onClick={handleClose4}
-            >
-              <ListItemButton>
-                <ListItemText primary="Edit Profile" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="Account" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="Change Password" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="My Settings" />
-              </ListItemButton>
-            </List>
-          </Box>
-          <Divider />
-          <Box p={2}>
-            <Link to="/">
-              <Button fullWidth variant="contained" color="primary">
+          <Box p={1}>
+              <Button fullWidth variant="contained" onClick={logout}  className="bg-cyan-500 ">
                 Logout
               </Button>
-            </Link>
           </Box>
-        </Box>
       </Menu>
     </>
   );
