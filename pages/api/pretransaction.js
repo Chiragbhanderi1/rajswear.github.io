@@ -3,8 +3,7 @@ import Product from "../../models/Product";
 import pincodes from '../../pincodes.json'
 import connectDb from "../../middleware/mongoose"
 const https = require("https");
-const PaytmChecksum = require("PaytmChecksum");
-
+const PaytmChecksum = require('paytmchecksum');
 const handler = async (req, res)=> {
   var paytmParams = {};
   if (req.method == "POST") {

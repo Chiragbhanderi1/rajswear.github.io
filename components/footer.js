@@ -87,7 +87,7 @@ const Footer = () => {
               </nav>
             </div>
             <div>
-            <Image className="md:ml-5 ml-10" src="/pay.png" alt="" width={250} height={150}/>
+            <Image className="md:ml-5 ml-10" src="/pay.png" alt="" width={250} height={105}/>
             </div>
           </div>
         </div>
